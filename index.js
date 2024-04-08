@@ -57,10 +57,14 @@ app.get("/disparador", async (req, res) => {
 });
 
 app.post("/rfid", async (req, res) => {
+  console.log(req.body);
   const newRFID = req.body[0].data.idHex;
+  const antena = req.body[0].data.antenna;
+  console.log(antena);
+  // console.log(newRFID);
   const invitado = invitados.find((invitado) => invitado.RFID === newRFID);
 
-  if (invitado) {
+  if (invitado && antena === 2) {
     const codigoGanador = invitado.cod_ganado;
     await turnOnChannel(1);
     startListeningForHello(codigoGanador);
