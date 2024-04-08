@@ -1,28 +1,13 @@
+// tcpServer.js
 import net from "net";
 import { turnOffChannel } from "./modbus.js";
 import { accionador } from "./utils.js";
 
-const tcpPort = 3012;
+const tcpPort = 3050;
 let shouldListenForHello = false;
-let shouldListenForPairing = false;
-let rfid = "";
-let emparejamientos = [];
-let code = "";
 
-export const startListeningForHello = (codigoGanador) => {
+export const startListeningForHello = () => {
   shouldListenForHello = true;
-  code = codigoGanador; // Actualiza la variable 'code' con el código ganador
-};
-const updateCode = (newCode) => {
-  code = newCode;
-};
-
-export const startPairingProcess = (rfidCode) => {
-  rfid = rfidCode;
-  shouldListenForPairing = true;
-};
-export const updateRFID = (newRFID) => {
-  rfid = newRFID;
 };
 
 const tcpServer = net.createServer((socket) => {
@@ -32,16 +17,12 @@ const tcpServer = net.createServer((socket) => {
     const message = data.toString().trim();
     console.log("Datos:", message);
 
-    if (shouldListenForHello && message === code) {
+    if (shouldListenForHello && message === "P1063406-038") {
       setTimeout(async () => {
         await turnOffChannel(1);
         accionador();
       }, 1000);
       shouldListenForHello = false;
-    }
-
-    if (shouldListenForPairing) {
-      emparejamientos.push({ idHex: rfid, codigoProducto: message });
     }
   });
 
@@ -63,11 +44,3 @@ tcpServer.listen(tcpPort, () => {
 tcpServer.on("error", (error) => {
   console.error("Error del servidor TCP:", error);
 });
-
-export const getPairings = () => {
-  return emparejamientos;
-};
-
-export const clearPairings = () => {
-  emparejamientos = [];
-};

@@ -17,9 +17,7 @@ export const connectModbusClient = async () => {
     heartbeatTimer = setInterval(() => {
       client
         .readCoils(startAddressForOutputChannel, 1)
-        .then(() => {
-          console.log("Heartbeat: conexión activa");
-        })
+        .then(() => {})
         .catch((e) => {
           console.error("Error en el heartbeat:", e);
         });
