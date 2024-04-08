@@ -11,7 +11,7 @@ let code = "";
 
 export const startListeningForHello = (codigoGanador) => {
   shouldListenForHello = true;
-  code = codigoGanador; // Actualiza la variable 'code' con el código ganador
+  code = codigoGanador;
 };
 
 export const startPairingProcess = (rfidCode) => {
