@@ -49,6 +49,8 @@ export const invitados = [
     company: "ARKISOFT Soluciones de Software, C.A.",
     phone: "+584127027264",
     uniqueId: "luh0dyyb",
+    RFID: "35e017030b0000000010b903",
+    cod_ganado: "090424008",
     __v: 0,
   },
   {
@@ -61,6 +63,8 @@ export const invitados = [
     company: "California Home Fashions C.A.",
     phone: "+584241460565",
     uniqueId: "luh288hi",
+    RFID: "35e017030b0000000010b90e",
+    cod_ganado: "090424007",
     __v: 0,
   },
   {
@@ -73,6 +77,8 @@ export const invitados = [
     company: "Automercados Plaza´s",
     phone: "+584241517983",
     uniqueId: "luh6jlqv",
+    RFID: "35e017030b0000000010b909",
+    cod_ganado: "090424006",
     __v: 0,
   },
   {
@@ -85,6 +91,8 @@ export const invitados = [
     company: "BAT Venezuela",
     phone: "+584125644499",
     uniqueId: "luh8bifk",
+    RFID: "35e017030b0000000010b908",
+    cod_ganado: "090424009",
     __v: 0,
   },
   {
@@ -97,6 +105,8 @@ export const invitados = [
     company: "Automercados Plazas",
     phone: "+584123355283",
     uniqueId: "luhacd9f",
+    RFID: "35e017030b0000000010b902",
+    cod_ganado: "090424011",
     __v: 0,
   },
   {
@@ -109,6 +119,8 @@ export const invitados = [
     company: "Avila Tek ",
     phone: "+584124845845",
     uniqueId: "luiw45kn",
+    RFID: "35e017030b00000000115414",
+    cod_ganado: "090424016",
     __v: 0,
   },
   {
@@ -121,6 +133,9 @@ export const invitados = [
     company: "Novedades Emprendedoras NECA C.A.",
     phone: "+584126212249",
     uniqueId: "luk2yees",
+    RFID: "35e017030b0000000011540f",
+    cod_ganado: "090424005",
+
     __v: 0,
   },
   {
@@ -133,6 +148,8 @@ export const invitados = [
     company: "InTeam C.A.",
     phone: "+584122255584",
     uniqueId: "luk2ywua",
+    RFID: "35e017030b00000000115409",
+    cod_ganado: "090424003",
     __v: 0,
   },
   {
@@ -145,6 +162,8 @@ export const invitados = [
     company: "Abaco",
     phone: "+584241222809",
     uniqueId: "luk3a2do",
+    RFID: "35e017030b00000000115408",
+    cod_ganado: "090424002",
     __v: 0,
   },
   {
@@ -157,6 +176,8 @@ export const invitados = [
     company: "Yogur Yolo",
     phone: "+584143055422",
     uniqueId: "luk8s4sa",
+    RFID: "35e017030b00000000115403",
+    cod_ganado: "090424014",
     __v: 0,
   },
   {
@@ -169,6 +190,8 @@ export const invitados = [
     company: "Nestle Venezuela S.A.",
     phone: "+584129625830",
     uniqueId: "luk97lqb",
+    RFID: "35e017030b00000000115402",
+    cod_ganado: "090424001",
     __v: 0,
   },
   {
@@ -181,6 +204,8 @@ export const invitados = [
     company: "Grau",
     phone: "+584122295191",
     uniqueId: "lukg13ot",
+    RFID: "35e017030b0000000010e414",
+    cod_ganado: "090424004",
     __v: 0,
   },
   {
@@ -193,6 +218,8 @@ export const invitados = [
     company: "Corporación Jsl ",
     phone: "+584122150888",
     uniqueId: "lukqrcvl",
+    RFID: "35e017030b0000000010e40f",
+    cod_ganado: "090424017",
     __v: 0,
   },
   {
@@ -205,6 +232,9 @@ export const invitados = [
     company: "Corporación JSL",
     phone: "+584142617273",
     uniqueId: "lul8mblm",
+    RFID: "35e017030b0000000010e40e",
+    cod_ganado: "090424012",
+
     __v: 0,
   },
   {
@@ -217,6 +247,8 @@ export const invitados = [
     company: "Centro Medico de Caracas",
     phone: "+584241843085",
     uniqueId: "lulor3cm",
+    RFID: "35e017030b0000000010e402",
+    cod_ganado: "090424010",
     __v: 0,
   },
   {
@@ -229,6 +261,8 @@ export const invitados = [
     company: "Unimet ",
     phone: "+584242463843",
     uniqueId: "lum5sp68",
+    RFID: "35e017030b0000000010e408",
+    cod_ganado: "090424013",
     __v: 0,
   },
   {
@@ -241,6 +275,8 @@ export const invitados = [
     company: "Abaco Services & Consulting, C.A.",
     phone: "+584143171770",
     uniqueId: "lumw0qou",
+    RFID: "35e017030b0000000010e403",
+    cod_ganado: "090424015",
     __v: 0,
   },
 ];
