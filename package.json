@@ -15,6 +15,12 @@
     "express": "^4.19.2",
     "https": "^1.0.0",
     "modbus-serial": "^8.0.16",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0"
   }
 }

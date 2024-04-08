@@ -7,6 +7,7 @@ const port = 502;
 const startAddressForOutputChannel = 16;
 
 const heartbeatInterval = 10000;
+// eslint-disable-next-line no-unused-vars
 let heartbeatTimer;
 
 export const connectModbusClient = async () => {

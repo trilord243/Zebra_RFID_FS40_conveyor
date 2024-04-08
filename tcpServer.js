@@ -1,7 +1,7 @@
 import net from "net";
 import { turnOffChannel } from "./modbus.js";
 import { accionador } from "./utils.js";
-
+import { io } from "./index.js";
 const tcpPort = 3012;
 let shouldListenForHello = false;
 let shouldListenForPairing = false;
@@ -12,9 +12,6 @@ let code = "";
 export const startListeningForHello = (codigoGanador) => {
   shouldListenForHello = true;
   code = codigoGanador; // Actualiza la variable 'code' con el código ganador
-};
-const updateCode = (newCode) => {
-  code = newCode;
 };
 
 export const startPairingProcess = (rfidCode) => {
@@ -41,7 +38,9 @@ const tcpServer = net.createServer((socket) => {
     }
 
     if (shouldListenForPairing) {
-      emparejamientos.push({ idHex: rfid, codigoProducto: message });
+      const nuevoEmparejamiento = { idHex: rfid, codigoProducto: message };
+      emparejamientos.push(nuevoEmparejamiento);
+      io.emit("nuevoEmparejamiento", nuevoEmparejamiento);
     }
   });
 

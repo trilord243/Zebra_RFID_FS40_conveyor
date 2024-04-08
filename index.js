@@ -1,4 +1,7 @@
+/* eslint-disable no-undef */
 import express from "express";
+import { createServer } from "http";
+import { Server } from "socket.io";
 import {
   connectModbusClient,
   disconnectModbusClient,
@@ -6,17 +9,25 @@ import {
   turnOnChannel,
 } from "./modbus.js";
 import {
+  clearPairings,
+  getPairings,
   startListeningForHello,
   startPairingProcess,
-  getPairings,
-  clearPairings,
   updateRFID,
 } from "./tcpServer.js";
-import { accionador } from "./utils.js";
 import { invitados } from "./invitados.js";
+import { accionador } from "./utils.js";
+
 const app = express();
 const port = 3000;
-app.use(express.json());
+const httpServer = createServer(app);
+export const io = new Server(httpServer, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+  },
+});
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -53,6 +64,7 @@ app.post("/rfid", async (req, res) => {
     const codigoGanador = invitado.cod_ganado;
     await turnOnChannel(1);
     startListeningForHello(codigoGanador);
+    io.emit("invitadoEncontrado", invitado);
     res.send(
       "RFID encontrado, canal 1 encendido y esperando mensaje correspondiente"
     );
@@ -79,10 +91,11 @@ app.get("/culminar-emparejamiento", async (req, res) => {
 });
 
 connectModbusClient().then(() => {
-  app.listen(port, () => {
+  httpServer.listen(port, () => {
     console.log(`API escuchando en el puerto ${port}`);
   });
 });
+
 process.on("SIGINT", () => {
   disconnectModbusClient();
   process.exit();
