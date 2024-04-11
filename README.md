@@ -36,7 +36,7 @@ Si la validación es exitosa, se envía una señal al actuador ADAM-6000 a trav�
 - **Protocolo Modbus con ADAM-6000**: Facilita una integración robusta y confiable para el control del conveyor.
 - **Sockets para comunicación con FS40**: Permite una conexión en tiempo real y bidireccional para la activación basada en eventos
 
-![alt text]([https://firebasestorage.googleapis.com/v0/b/invitacion-27932.appspot.com/o/Sin%20t%C3%ADtulo.png?alt=media&token=0ff18c99-86dd-4ad9-a004-ab4ca574c48a](https://firebasestorage.googleapis.com/v0/b/invitacion-27932.appspot.com/o/Imagen%20de%20WhatsApp%202024-04-09%20a%20las%2015.48.43_1aec0777.jpg?alt=media&token=d5025982-887e-47c5-ae3f-aaa7b03a66db))
+![alt text](https://firebasestorage.googleapis.com/v0/b/invitacion-27932.appspot.com/o/Imagen%20de%20WhatsApp%202024-04-09%20a%20las%2015.48.43_1aec0777.jpg?alt=media&token=d5025982-887e-47c5-ae3f-aaa7b03a66db)
 
 ## Impacto del Proyecto
 
