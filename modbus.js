@@ -1,9 +1,10 @@
+/* eslint-disable no-undef */
 // modbusFunctions.js
 import ModbusRTU from "modbus-serial";
 
 const client = new ModbusRTU();
-const ip = "10.10.16.30";
-const port = 502;
+const ip = process.env.MODBUS_IP || "192.168.1.10";
+const port = process.env.MODBUS_PORT || 502;
 const startAddressForOutputChannel = 16;
 
 const heartbeatInterval = 10000;

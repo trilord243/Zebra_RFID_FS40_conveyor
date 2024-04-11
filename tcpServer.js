@@ -1,8 +1,9 @@
+/* eslint-disable no-undef */
 import net from "net";
 import { turnOffChannel } from "./modbus.js";
 import { accionador } from "./utils.js";
 import { io } from "./index.js";
-const tcpPort = 3012;
+const tcpPort = process.env.TCP_SERVER_PORT || 3012;
 let shouldListenForHello = false;
 let shouldListenForPairing = false;
 let rfid = "";

@@ -17,9 +17,11 @@ import {
 } from "./tcpServer.js";
 import { invitados } from "./invitados.js";
 import { accionador } from "./utils.js";
+import "dotenv/config";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
 const httpServer = createServer(app);
 export const io = new Server(httpServer, {
   cors: {
