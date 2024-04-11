@@ -60,7 +60,7 @@ app.post("/rfid", async (req, res) => {
   console.log(req.body);
   const newRFID = req.body[0].data.idHex;
   const antena = req.body[0].data.antenna;
-  console.log(antena);
+
   const invitado = invitados.find((invitado) => invitado.RFID === newRFID);
 
   if (invitado && antena === 2) {

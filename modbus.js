@@ -2,7 +2,7 @@
 import ModbusRTU from "modbus-serial";
 
 const client = new ModbusRTU();
-const ip = "192.168.1.30";
+const ip = "10.10.16.30";
 const port = 502;
 const startAddressForOutputChannel = 16;
 
